@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         int number_for_guess = generateNumber();
+        int count_attempts = 0;
         while (true) {
             Scanner scanner = new Scanner(System.in);
 
@@ -18,14 +19,17 @@ public class Main {
 //                System.out.println(number);
 //                System.out.println(number_for_guess);
                 if (number == number_for_guess){
-                    System.out.println("Вы угадали число!");
+                    count_attempts++;
+                    System.out.println("Вы угадали число!\nВаше количество попыток:" + count_attempts);
                     break;
                 }
                 else if(number > number_for_guess){
                     System.out.println("Искомое число меньше вашего");
+                    count_attempts++;
                 }
                 else{
                     System.out.println("Искомое число больше вашего");
+                    count_attempts++;
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Неверный ввод, введите целое число от 0 до 100");
