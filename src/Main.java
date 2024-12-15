@@ -18,7 +18,7 @@ public class Main {
 //                System.out.println(number);
 //                System.out.println(number_for_guess);
                 if (number == number_for_guess){
-                    System.out.printf("Вы угадали число!");
+                    System.out.println("Вы угадали число!");
                     break;
                 }
                 else if(number > number_for_guess){
